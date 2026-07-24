@@ -169,11 +169,11 @@ body {
     font-weight: 300;
 }
 
-/* --- Sección Galería --- */
+/* --- Nueva Galería Estilo Carrusel Premium --- */
 .seccion-galeria {
     background-color: #ffffff;
     text-align: center;
-    padding: 80px 20px;
+    padding: 80px 0; /* Quitamos el padding lateral para que el carrusel toque los bordes */
 }
 
 .seccion-galeria h2 {
@@ -184,27 +184,86 @@ body {
     letter-spacing: 2px;
 }
 
-.galeria-grid {
-    display: grid;
-    /* Esto hace que las fotos sean responsivas (se adaptan al tamaño de la pantalla) */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+.carrusel-fotos {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Hace que las fotos se "peguen" al centro al deslizar */
     gap: 15px;
-    max-width: 1000px;
+    padding: 20px;
     margin: 0 auto;
+    max-width: 1000px;
+    scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
 }
 
-.galeria-grid img {
+/* Oculta la barra de scroll en Chrome/Safari para un look más limpio */
+.carrusel-fotos::-webkit-scrollbar {
+    display: none;
+}
+
+.carrusel-fotos img {
+    flex: 0 0 85%; /* En celular, cada foto ocupa el 85% de la pantalla */
+    max-width: 320px; /* En PC, no serán más anchas que esto */
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    scroll-snap-align: center; /* Centra la foto al deslizar */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+}
+
+.carrusel-fotos img:hover {
+    transform: scale(1.02);
+}
+
+/* --- Sección Detalles (Vestimenta y Regalos) --- */
+.seccion-detalles {
+    background-color: #f9f7f3;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.detalle-caja {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    border-radius: 15px;
+    padding: 40px 20px;
     width: 100%;
-    height: 350px; /* Todas las fotos tendrán la misma altura */
-    object-fit: cover; /* Recorta la foto sin deformarla */
-    border-radius: 12px; /* Bordes redondeados elegantes */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease; /* Prepara la animación de zoom */
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
 }
 
-/* Efecto premium: Al pasar el dedo o el mouse, la foto hace un zoom suave */
-.galeria-grid img:hover {
-    transform: scale(1.03);
+.detalle-caja:hover {
+    transform: translateY(-5px); /* Efecto de flotar sutil */
+}
+
+.detalle-caja .icono {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.detalle-caja h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    color: #c9a063;
+    margin-bottom: 15px;
+}
+
+.detalle-caja p {
+    color: #555555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.detalle-caja .nota {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 15px;
+    color: #888888;
 }
 
 /* --- Sección Ubicación --- */
