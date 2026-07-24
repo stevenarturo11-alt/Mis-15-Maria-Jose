@@ -405,3 +405,18 @@ body {
     opacity: 0;
     visibility: hidden; /* Oculta toda la pantalla protectora */
 }
+
+/* --- Ajuste Responsivo para Celulares (Galería de Fotos) --- */
+@media (max-width: 600px) {
+    .galeria-grid {
+        grid-template-columns: 1fr; /* Fuerza una sola foto por fila */
+        gap: 20px; /* Espacio entre fotos */
+        padding: 0 10px; /* Margen lateral para que no toquen los bordes */
+    }
+    
+    .galeria-grid img {
+        height: 250px; /* Reduce la altura para que no ocupen toda la pantalla */
+        width: 100%;
+        object-fit: cover;
+    }
+}
