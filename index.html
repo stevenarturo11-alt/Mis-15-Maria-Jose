@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis XV Años</title>
+    <!-- Fuentes elegantes de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Pantalla de Sobre Inicial -->
+    <div id="pantalla-sobre">
+        <div class="sobre">
+            <div class="solapa"></div>
+            <div class="sello">Abrir Invitación</div>
+        </div>
+    </div>
+
+    <!-- Contenedor para los pétalos mágicos -->
+    <div id="contenedor-petalos"></div>
+
+    <!-- Reproductor de Música -->
+    <audio id="musica" loop>
+        <source src="cancion.mp3" type="audio/mpeg">
+    </audio>
+    <button id="btn-musica">🎵 Reproducir Música</button>
+
+    <!-- Portada Principal -->
+    <header class="portada">
+        <div class="capa-oscura"></div>
+        <div class="contenido-portada">
+            <p class="pre-titulo">Mis XV Años</p>
+            <!-- Puedes cambiar el nombre aquí -->
+            <h1 class="nombre-quinceanera">Maria Jose</h1>
+            <p class="fecha-portada">15 de Agosto, 2026</p>
+        </div>
+    </header>
+
+    <!-- Sección de Cuenta Regresiva -->
+    <section class="seccion-contador">
+        <h2>Faltan...</h2>
+        <div id="contador" class="contador-caja">
+            <div class="tiempo">
+                <span id="dias">00</span>
+                <p>Días</p>
+            </div>
+            <div class="tiempo">
+                <span id="horas">00</span>
+                <p>Horas</p>
+            </div>
+            <div class="tiempo">
+                <span id="minutos">00</span>
+                <p>Min</p>
+            </div>
+            <div class="tiempo">
+                <span id="segundos">00</span>
+                <p>Seg</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de la Historia -->
+    <section class="seccion-historia">
+        <h2>Mi Historia</h2>
+        <p>Hay momentos en la vida que imaginamos durante años, y hoy, uno de esos sueños se hace realidad. Acompañada del amor de mi familia y amigos, quiero compartir con ustedes la magia de esta noche inolvidable. Gracias por formar parte de mi historia.</p>
+    </section>
+
+    <!-- Sección de Galería de Fotos -->
+    <section class="seccion-galeria">
+        <h2>Mis Momentos</h2>
+        < class="galeria-grid">
+            <!-- Asegúrate de que los nombres coincidan con tus fotos -->
+            <img src="foto1.jpg" alt="Foto 1">
+            <img src="foto2.jpg" alt="Foto 2">
+            <img src="foto3.jpg" alt="Foto 3">
+            <img src="foto4.jpg" alt="Foto 4">
+            <!-- Nuevas fotos aquí -->
+            <img src="foto5.jpg" alt="Foto 5">
+            <img src="foto6.jpg" alt="Foto 6">
+        </div>
+    </section>
+
+    <!-- Sección de Ubicación y Mapa -->
+    <section class="seccion-ubicacion">
+       <h2>Ubicaciones</h2>
+    
+    <!-- Lugar 1: Eucaristía -->
+    <div class="info-lugar">
+        <h3>⛪ Ceremonia Religiosa</h3>
+        <p><strong>Basílica Menor Nuestra Señora Del Rosario</strong></p>
+        <!-- Cambia aquí las fechas del evento -->
+        <p>Sábado, 07 de Agosto de 2026 - 18:30 hrs</p>
+        <p>Cra. 4 N° 11-64 - Barrio San Antonio, La Unión, Colombia.</p>
+    </div>
+
+    <!-- Lugar 2: Recepción -->
+    <div class="info-lugar">
+        <h3>🥂 Recepción</h3>
+        <p><strong>Salón de Eventos "Flores Taty"</strong></p>
+        <!-- Cambia aquí las fechas del evento -->
+        <p>Sábado, 15 de Agosto de 2026 - 19:30 hrs</p>
+        <p>Barrio Sucre, La Unión, Colombia.</p>
+    </div>
+        
+        <!-- Contenedor del Mapa de Google -->
+        <div class="mapa-container">
+            <!-- Este es un mapa de ejemplo. Luego te enseñaré a cambiarlo por el tuyo -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.296705617549!2d-77.13266589999999!3d1.5824399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e2f1d0065ffeb61%3A0x8deb86104f4c1395!2sFlores%20Taty!5e0!3m2!1ses!2sco!4v1784923944061!5m2!1ses!2sco" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+    </section>
+
+    <!-- Sección de RSVP (Confirmación por WhatsApp) -->
+    <section class="seccion-rsvp">
+        <h2>Confirmar Asistencia</h2>
+        <p>Tu presencia es muy importante para mí. Por favor, confirma tu asistencia antes del 1 de Diciembre.</p>
+        
+        <!-- Cambia el número 573000000000 por tu número real -->
+        <a href="https://wa.me/573113198564?text=¡Hola!%20Confirmo%20mi%20asistencia%20a%20los%20XV%20años%20de%20Valentina." class="btn-whatsapp" target="_blank">
+            💌 Confirmar por WhatsApp
+        </a>
+    </section>
+
+    <!-- Pie de página final -->
+    <footer class="footer-final">
+        <p>Diseñado con ♥ para Valentina</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

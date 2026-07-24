@@ -1,0 +1,407 @@
+/* Reseteo y Fuentes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #111;
+    overflow-x: hidden;
+}
+
+/* Botón de Música Flotante */
+#btn-musica {
+    position: fixed; /* Se queda fijo al hacer scroll */
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    backdrop-filter: blur(8px); /* Efecto de cristal */
+    font-family: inherit;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+#btn-musica:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Sección de Portada */
+.portada {
+    position: relative;
+    height: 100vh; /* 100% del alto de la pantalla */
+    width: 100%;
+    background-image: url('portada.jpg'); /* Llama a tu foto */
+    background-size: cover; /* Ajusta la foto sin deformarla */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Capa para oscurecer la imagen y mejorar lectura */
+.capa-oscura {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+/* Textos de la portada */
+.contenido-portada {
+    position: relative;
+    z-index: 10;
+    animation: aparecerArriba 1.5s ease-out; /* Animación suave */
+}
+
+.pre-titulo {
+    font-size: 1rem;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.nombre-quinceanera {
+    font-family: 'Cinzel', serif; /* Fuente elegante */
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+}
+
+.fecha-portada {
+    font-size: 1.2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Animación CSS */
+@keyframes aparecerArriba {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Adaptación para celulares pequeños */
+@media (max-width: 600px) {
+    .nombre-quinceanera { font-size: 3.2rem; }
+    #btn-musica { top: 15px; right: 15px; font-size: 0.75rem; }
+}
+
+/* --- Sección Cuenta Regresiva --- */
+.seccion-contador {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 70px 20px;
+    color: #333333;
+}
+
+.seccion-contador h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #c9a063; /* Tono dorado elegante */
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.contador-caja {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; /* Permite que las cajas bajen en pantallas muy pequeñas */
+}
+
+.tiempo {
+    background-color: #f9f7f3;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+    padding: 20px 15px;
+    min-width: 85px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.tiempo span {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #222222;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.tiempo p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #777777;
+    font-weight: 500;
+}
+
+/* --- Sección Historia --- */
+.seccion-historia {
+    background-color: #f9f7f3; /* Un tono crema diferente para separar secciones */
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.seccion-historia h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #c9a063;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.seccion-historia p {
+    max-width: 650px;
+    margin: 0 auto; /* Centra el texto */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555555;
+    font-weight: 300;
+}
+
+/* --- Sección Galería --- */
+.seccion-galeria {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.seccion-galeria h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #c9a063;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+.galeria-grid {
+    display: grid;
+    /* Esto hace que las fotos sean responsivas (se adaptan al tamaño de la pantalla) */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 350px; /* Todas las fotos tendrán la misma altura */
+    object-fit: cover; /* Recorta la foto sin deformarla */
+    border-radius: 12px; /* Bordes redondeados elegantes */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease; /* Prepara la animación de zoom */
+}
+
+/* Efecto premium: Al pasar el dedo o el mouse, la foto hace un zoom suave */
+.galeria-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* --- Sección Ubicación --- */
+.seccion-ubicacion {
+    background-color: #f9f7f3;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.seccion-ubicacion h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #c9a063;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.info-lugar {
+    margin-bottom: 30px;
+}
+
+.info-lugar h3 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-lugar p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.mapa-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden; /* Esto hace que el mapa respete los bordes redondeados */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border: 3px solid #ffffff;
+}
+
+/* --- Sección RSVP (WhatsApp) --- */
+.seccion-rsvp {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.seccion-rsvp h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.2rem;
+    color: #c9a063;
+    margin-bottom: 15px;
+}
+
+.seccion-rsvp p {
+    max-width: 500px;
+    margin: 0 auto 35px auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #c9a063; /* Dorado elegante */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(201, 160, 99, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #b38a4d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(201, 160, 99, 0.6);
+}
+
+/* --- Footer --- */
+.footer-final {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- Efectos Visuales (Pétalos) --- */
+#contenedor-petalos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Evita que bloqueen los clics */
+    z-index: 9999; /* Asegura que estén por encima de todo */
+    overflow: hidden;
+}
+
+.petalo {
+    position: absolute;
+    top: -10%;
+    background-color: #ffd1dc; /* Color rosa pastel (puedes cambiarlo) */
+    border-radius: 50% 0 50% 0; 
+    opacity: 0.7;
+    animation: caer linear forwards;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+/* --- Efecto de Sobre Inicial --- */
+#pantalla-sobre {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #f9f7f3; /* Fondo de la pantalla de carga */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Cubre toda la página */
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.sobre {
+    position: relative;
+    width: 320px;
+    height: 220px;
+    background-color: #c9a063; /* Color dorado del sobre */
+    border-radius: 5px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.sobre:hover {
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+}
+
+/* Triángulo que simula la solapa cerrada */
+.solapa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-top: 110px solid #b38a4d; /* Tono más oscuro para dar profundidad */
+    transform-origin: top;
+    transition: transform 0.8s ease;
+    z-index: 2;
+}
+
+/* Botón/Sello para abrir */
+.sello {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    color: #c9a063;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+    z-index: 3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: opacity 0.4s ease;
+}
+
+/* Animaciones que se activan con JavaScript */
+.sobre.abierto .solapa {
+    transform: rotateX(180deg); /* Levanta la solapa en 3D */
+    z-index: 0;
+}
+
+.sobre.abierto .sello {
+    opacity: 0; /* Desaparece el sello */
+}
+
+#pantalla-sobre.oculto {
+    opacity: 0;
+    visibility: hidden; /* Oculta toda la pantalla protectora */
+}
