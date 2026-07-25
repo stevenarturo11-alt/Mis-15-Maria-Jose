@@ -514,3 +514,25 @@ h2, h3 {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
     border: 2px solid #ffffff;
 }
+/* --- Estilos para los Nombres de los Padres --- */
+.nombres-padres {
+    margin: 15px 0 30px 0;
+    text-align: center;
+}
+
+.texto-bendicion {
+    font-size: 1.1rem;
+    color: #555555; /* Un gris oscuro elegante */
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.padres-destacados {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem; /* Tamaño grande para que destaquen */
+    color: #4682b4; /* Azul acero de tu paleta */
+    line-height: 1.1; /* Reduce el espacio entre los nombres y el símbolo & */
+    margin: 0;
+    font-weight: normal;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Sombra muy suave para dar legibilidad */
+}
