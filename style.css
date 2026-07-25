@@ -6,9 +6,25 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #111;
-    overflow-x: hidden;
+    background-color: #f4f6f7; /* Gris Perla muy suave */
+    color: #1a252f; /* Azul Marino/Noche */
+    font-family: 'Arial', sans-serif; /* (Mantén la fuente que ya tenías) */
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem; /* Más grande para que destaque como firma */
+    color: #bde0fe; /* Un azul pastel/hielo muy elegante */
+    text-shadow: 2px 2px 5px rgba(26, 37, 47, 0.8); /* Sombra oscura suave para que no se pierda en la foto */
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+h2, h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    color: #4682b4; /* Azul acero para los títulos de abajo */
+    font-weight: normal;
+    margin-bottom: 20px;
 }
 
 /* Botón de Música Flotante */
@@ -73,7 +89,7 @@ body {
 }
 
 .nombre-quinceanera {
-    font-family: 'Cinzel', serif; /* Fuente elegante */
+    font-family: 'Great Vibes', cursive; /* Fuente elegante */
     font-size: 4.5rem;
     margin-bottom: 10px;
     text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
@@ -106,9 +122,9 @@ body {
 }
 
 .seccion-contador h2 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Great Vibes', cursive;
     font-size: 2.2rem;
-    color: #c9a063; /* Tono dorado elegante */
+    color: #4682b4; /* Tono dorado elegante */
     margin-bottom: 40px;
     letter-spacing: 2px;
 }
@@ -121,7 +137,7 @@ body {
 }
 
 .tiempo {
-    background-color: #f9f7f3;
+    background-color: #f4f6f7;
     border: 1px solid #eaeaea;
     border-radius: 10px;
     padding: 20px 15px;
@@ -147,15 +163,15 @@ body {
 
 /* --- Sección Historia --- */
 .seccion-historia {
-    background-color: #f9f7f3; /* Un tono crema diferente para separar secciones */
+    background-color: #f4f6f7; /* Un tono crema diferente para separar secciones */
     text-align: center;
     padding: 80px 20px;
 }
 
 .seccion-historia h2 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Great Vibes', cursive;
     font-size: 2.2rem;
-    color: #c9a063;
+    color: #4682b4;
     margin-bottom: 25px;
     letter-spacing: 2px;
 }
@@ -177,9 +193,9 @@ body {
 }
 
 .seccion-galeria h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 2.2rem;
-    color: #c9a063;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #4682b4;
     margin-bottom: 40px;
     letter-spacing: 2px;
 }
@@ -217,7 +233,7 @@ body {
 
 /* --- Sección Detalles (Vestimenta y Regalos) --- */
 .seccion-detalles {
-    background-color: #f9f7f3;
+    background-color: #e5e7e9; /* Fondo Plata Claro */
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -226,15 +242,11 @@ body {
     text-align: center;
 }
 
-.detalle-caja {
-    background-color: #ffffff;
-    border: 1px solid #eaeaea;
-    border-radius: 15px;
-    padding: 40px 20px;
-    width: 100%;
-    max-width: 350px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+.detalle-caja h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.6rem;
+    color: #a9cce3; /* Textos en Azul Bebé */
+    margin-bottom: 15px;
 }
 
 .detalle-caja:hover {
@@ -247,9 +259,9 @@ body {
 }
 
 .detalle-caja h3 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Great Vibes', cursive;
     font-size: 1.6rem;
-    color: #c9a063;
+    color: #4682b4;
     margin-bottom: 15px;
 }
 
@@ -268,15 +280,15 @@ body {
 
 /* --- Sección Ubicación --- */
 .seccion-ubicacion {
-    background-color: #f9f7f3;
+    background-color: #f4f6f7;
     text-align: center;
     padding: 80px 20px;
 }
 
 .seccion-ubicacion h2 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Great Vibes', cursive;
     font-size: 2.2rem;
-    color: #c9a063;
+    color: #4682b4;
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
@@ -313,9 +325,9 @@ body {
 }
 
 .seccion-rsvp h2 {
-    font-family: 'Cinzel', serif;
+    font-family: 'Great Vibes', cursive;
     font-size: 2.2rem;
-    color: #c9a063;
+    color: #4682b4;
     margin-bottom: 15px;
 }
 
@@ -328,7 +340,7 @@ body {
 
 .btn-whatsapp {
     display: inline-block;
-    background-color: #c9a063; /* Dorado elegante */
+    background-color: #4682b4; /* Dorado elegante */
     color: #ffffff;
     text-decoration: none;
     padding: 15px 40px;
@@ -372,10 +384,11 @@ body {
 .petalo {
     position: absolute;
     top: -10%;
-    background-color: #ffd1dc; /* Color rosa pastel (puedes cambiarlo) */
+    background-color: #bde0fe; /* Azul suave / pastel */
     border-radius: 50% 0 50% 0; 
-    opacity: 0.7;
+    opacity: 0.85;
     animation: caer linear forwards;
+    box-shadow: 0 0 8px rgba(189, 224, 254, 0.6); /* Brillo del mismo tono azul suave */
 }
 
 @keyframes caer {
@@ -387,18 +400,18 @@ body {
     }
 }
 
-/* --- Efecto de Sobre Inicial --- */
+/* --- ESTILOS DEL SOBRE (PANTALLA DE INICIO) --- */
 #pantalla-sobre {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: #f9f7f3; /* Fondo de la pantalla de carga */
+    background-color: #f4f6f7; /* Fondo Gris Perla de la paleta "Cielo de Invierno" */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10000; /* Cubre toda la página */
+    z-index: 10000;
     transition: opacity 1s ease, visibility 1s ease;
 }
 
@@ -406,18 +419,18 @@ body {
     position: relative;
     width: 320px;
     height: 220px;
-    background-color: #c9a063; /* Color dorado del sobre */
+    background: linear-gradient(135deg, #a9cce3 0%, #8db2cb 100%); /* Papel perlado azul bebé */
     border-radius: 5px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    box-shadow: 0 20px 50px rgba(26, 37, 47, 0.3); /* Sombra elegante para dar volumen */
     cursor: pointer;
     transition: transform 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Borde de luz sutil */
 }
 
 .sobre:hover {
-    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+    transform: scale(1.05) translateY(-5px); /* Efecto de flotar al pasar el mouse */
 }
 
-/* Triángulo que simula la solapa cerrada */
 .solapa {
     position: absolute;
     top: 0;
@@ -426,28 +439,40 @@ body {
     height: 0;
     border-left: 160px solid transparent;
     border-right: 160px solid transparent;
-    border-top: 110px solid #b38a4d; /* Tono más oscuro para dar profundidad */
+    border-top: 110px solid #7ea8c4; /* Tono de sombra para dar profundidad */
     transform-origin: top;
     transition: transform 0.8s ease;
     z-index: 2;
 }
 
-/* Botón/Sello para abrir */
+/* --- MONOGRAMA Y BOTÓN --- */
+.monograma {
+    position: absolute;
+    top: 15px; /* Ubicado en la parte superior */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem; /* Tamaño grande y destacado */
+    color: #ffffff; /* Blanco puro */
+    text-shadow: 2px 2px 5px rgba(26, 37, 47, 0.4); /* Sombra para que se lea perfecto */
+    z-index: 3;
+    pointer-events: none; /* Evita que interrumpa el clic para abrir */
+}
+
 .sello {
     position: absolute;
-    top: 50%;
+    top: 65%; /* Ubicado debajo del monograma */
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
-    color: #c9a063;
-    padding: 12px 25px;
-    border-radius: 30px;
-    font-weight: bold;
-    font-family: 'Cinzel', serif;
-    letter-spacing: 1px;
-    z-index: 3;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-    transition: opacity 0.4s ease;
+    color: #1a252f;
+    padding: 12px 30px;
+    border-radius: 30px; /* Estilo de botón pastilla */
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.2rem; /* Tamaño muy legible para el texto */
+    z-index: 4;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
 }
 
 /* Animaciones que se activan con JavaScript */
@@ -482,11 +507,10 @@ body {
 /* --- Estilos para las Fotos de Ubicaciones --- */
 .foto-lugar {
     width: 100%;
-    max-width: 350px; /* Evita que se vean inmensas en computadora */
-    height: 200px;
-    object-fit: cover; /* Recorta la foto sin deformarla */
-    border-radius: 12px; /* Bordes redondeados elegantes */
-    margin: 15px 0; /* Espacio arriba y abajo de la foto */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    max-width: 350px; 
+    height: auto; /* <-- El cambio clave: la altura ahora es automática */
+    border-radius: 12px; 
+    margin: 15px 0; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
     border: 2px solid #ffffff;
 }
